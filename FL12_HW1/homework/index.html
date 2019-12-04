@@ -5,6 +5,16 @@
   <meta charset="utf-8">
   <title>HTML Basics</title>
   <link rel="stylesheet" href="style.css">
+  <style media="screen">
+    .menu li {
+      display: inline;
+      list-style-type: none;
+    }
+    .menu li a {
+      padding: 10px 20px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
@@ -12,7 +22,242 @@
     <div id="main">
       <div id="container">
         <div id="content" role="main">
-          <!-- TODO: Content goes here -->
+          <header class="logo">
+            <a href="http://www.epam.com/">
+              <img src="logo.png" alt="Epam logo">
+            </a>
+            <h1>HTML Elements</h1>
+          </header>
+
+          <hr>
+
+          <section>
+            <nav class="menu">
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#headings">Headings</a></li>
+                <li><a href="#textFormats">Text formats</a></li>
+                <li><a href="#typesOfLists">Types of lists</a></li>
+                <li><a href="#table">Table</a></li>
+                <li><a href="#blockQuotes">Blockquotes</a></li>
+                <li><a href="#registration">Registration</a></li>
+              </ul>
+            </nav>
+          </section>
+
+          <hr>
+
+          <section>
+            <p>Lorem ipsum dolor sit amet,
+              <a href="#">test link</a>
+              adipiscing elit.
+              Nullam dignissim convallis est. Quisque aliquam.
+              <em>This is emphasized.</em>
+              Donec faucibus. Nunc iaculis suscipit dui. 4<sup>4</sup> = 256.
+              Water is H<sub>3</sub>PO<sub>4</sub>.
+              Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt
+              nec, gravida vehicula, nisl.
+              <cite>Time Magazine</cite>(That’s a citation). <u>Underline.</u>
+              Maecenas ornare tortor. Donec sed tellus eget sapien fringilla
+              nonummy. Mauris a ante. Suspendisse quam sem, consequat at,
+              commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis
+              tellus. <strong>I am strong.</strong>
+            </p>
+            <p>
+              Watch out for the abbreviations!
+              <abbr title="Hyper Text Markup Language">HTML</abbr> and
+              <abbr title="Cascading Style Sheets">CSS</abbr> are our tools.
+              <abbr title="JavaScript">JS</abbr>
+              is a dynamically typed language.
+              auris a ante. Suspendisse quam sem, consequat at, commodo vitae,
+               feugiat in, nunc.
+              Morbi imperdiet augue quis tellus.
+              Praesent mattis, massa quis luctus fermentum. To copy a file type
+              <samp>COPY</samp> <var>filename</var>.
+              <del>The meeting began at 7pm</del> <ins>Let’s make that 6.</ins>
+              This <s>text</s> has been struck.
+            </p>
+          </section>
+
+          <hr>
+
+          <section id="headings">
+            <p>
+              h1 defines the most important heading. h6 defines the least
+              important heading.
+              Font-size for h1 is the same as font-size for h2,
+              because we have to use only one h1 on the page, and it is
+              commonly used inside header
+            </p>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+          </section>
+
+          <hr>
+
+          <section id="textFormats">
+            <h2>Text formats</h2>
+
+            <h3>Article</h3>
+            <article>
+              <h2>Article title</h2>
+              <p>Article description</p>
+            </article>
+
+            <h4>Preformatted Text</h4>
+            <pre>
+Text in a <b>pre</b> element
+is displayed in a fixed-width
+font, and it preserves
+both           <b>spaces</b> and
+<b>line breaks</b>
+            </pre>
+
+            <h3>This is code</h3>
+            <pre>
+.flex {
+  display: flex;
+  justify-content: justify;
+  aliign-items: center;
+}
+          </pre>
+          </section>
+
+          <section id="typesOfLists">
+            <div>
+              <h2>Unordered Wish List</h2>
+              <ul>
+                <li>Iphone 11 pro max</li>
+                <li>
+                  Books:
+                  <ul>
+                    <li>Clean code principles javascript</li>
+                    <li>You don't know JS</li>
+                    <li>Angular Pro</li>
+                  </ul>
+                </li>
+                <li>Headphones</li>
+              </ul>
+            </div>
+
+            <div>
+              <h2>Ordered Task List</h2>
+              <ol>
+                <li>Pay the bills</li>
+                <li>Refuel the car</li>
+                <li>
+                  Finish homework
+                  <ol>
+                    <li>Create HTML page according to the requirements</li>
+                    <li>Upload to the GitHub repository</li>
+                  </ol>
+                </li>
+                <li>Enjoy your day</li>
+              </ol>
+            </div>
+
+            <div>
+              <h4>Definition List</h4>
+              <dl>
+                <dt>HTML</dt>
+                <dd>HTML is the standard markup language to
+                  create Web pages.
+                </dd>
+                <dt>CSS</dt>
+                <dd>CSS describes how HTML elements are to be displayed.</dd>
+                <dt>JavaScript</dt>
+                <dd>JavaScript is a scripting languages, primarily
+                  used on the Web.
+                </dd>
+              </dl>
+              <div>
+                <span>Select for learning</span>
+                <select>
+                  <option value="js">JS</option>
+                  <option value="html">HTML</option>
+                  <option value="css">CSS</option>
+                </select>
+              </div>
+            </div>
+          </section>
+
+          <hr>
+          <hr>
+
+          <section id="table">
+            <h2>Table</h2>
+            <table>
+              <tr>
+                <th>Skill</th>
+                <th>Training</th>
+                <th>City</th>
+              </tr>
+              <tr>
+                <td>JAVA</td>
+                <td>JAVA development training</td>
+                <td>Lviv</td>
+              </tr>
+              <tr>
+                <td>JAVASCRIPT</td>
+                <td>FRONT-END development</td>
+                <td>Kharkiv</td>
+              </tr>
+              <tr>
+                <td>IOS</td>
+                <td>IOS winter 2019</td>
+                <td>Kyiv</td>
+              </tr>
+              <tr>
+                <td>DEVOPS</td>
+                <td>DEVOPS spring 2020</td>
+                <td>Dnipro</td>
+              </tr>
+            </table>
+          </section>
+
+          <section id="blockQuotes">
+            <h2>Blockquotes</h2>
+            <p>
+              Let’s keep it simple. Italics are good to help
+              set it off from the body text. Be sure to style the citation.
+            </p>
+            <blockquote cite="http://">
+              <p>
+                "So if you want to go fast, if you want to get done quickly, if
+                you want your code to be easy to write, make it easy to read."
+                <a href="#">Robert C. Martin (Uncle Bob)</a>
+              </p>
+            </blockquote>
+          </section>
+
+          <hr>
+
+          <section id="registration">
+            <form action="" method="post">
+              <div>
+                <label for="text">Username:</label>
+                <input type="text" id="text">
+              </div>
+              <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+              </div>
+              <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password">
+              </div>
+              <textarea rows="3" cols="19"></textarea>
+              <br>
+              <button type="submit">Submit</button>
+            </form>
+          </section>
+
+          <footer>
+            © Copyright Epam Systems
+          </footer>
         </div>
       </div>
     </div>
