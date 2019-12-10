@@ -92,6 +92,7 @@
 
 
 @media screen {
+
   .tm-nav-item-link:hover {
     background-color: lightskyblue;
     color: #fff;
@@ -124,8 +125,8 @@
     0% {
       padding-left: 200px;
     }
-    100 {
-      padding-left: 0;
+    100% {
+      padding-left: 0px;
     }
   }
 
@@ -259,5 +260,4 @@
     color: lightskyblue;
     border-color: lightskyblue;
   }
-
 }
