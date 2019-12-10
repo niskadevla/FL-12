@@ -1,0 +1,263 @@
+@media print {
+  body,
+  .tm-main-content,
+  .carousel,
+  .tm-banner,
+  .tm-team-description-container,
+  .tm-footer {
+    padding: 0;
+  }
+
+  .tm-sidebar,
+  .tm-team-img,
+  #about,
+  .blocks .tm-content-box,
+  .tm-main-content section:last-of-type,
+  .carousel-indicators,
+  .carousel-item:not([class$="active"])
+   {
+    display: none;
+  }
+
+  body,
+  .carousel-content {
+    background-color: #fff;
+    color: #666;
+    font-weight: 400;
+  }
+
+  .tm-banner-text {
+    color: #bbb;
+    font-weight: 500;
+  }
+
+  .tm-banner-inner {
+    border-width: 2px;
+  }
+
+  h2,
+  h2.tm-section-title {
+    color: #577f8a;
+  }
+
+  section {
+    text-align: center;
+  }
+
+  .tm-section-title {
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .tm-team-description-container {
+    max-width: none;
+    font-weight: 400;
+  }
+
+  .tm-content-box {
+    margin-bottom: 0;
+  }
+
+  .padding-medium {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  a {
+    color: lightskyblue;
+    font-weight: 500;
+  }
+
+  .heading ol {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .heading li:nth-child(odd) {
+    text-align: right;
+  }
+
+  .heading li:nth-child(even) {
+    text-align: left;
+  }
+
+  .blocks .flex-item p:last-child {
+    font-style: italic;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+  }
+}
+
+
+@media screen {
+  .tm-nav-item-link:hover {
+    background-color: lightskyblue;
+    color: #fff;
+  }
+
+  .tm-banner {
+    border: 30px solid transparent;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-image: linear-gradient(270deg, burlywood, lightskyblue);
+    border-image-slice: 100%;
+    border-image-slice: 1;
+    padding: 0;
+    text-shadow: 4px 4px 2px #333;
+    text-align: center;
+  }
+
+  .tm-banner-text {
+    animation-name: anima;
+    animation-duration: 4s;
+    animation-delay: 0.4s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes anima {
+    0% {
+      padding-left: 200px;
+    }
+    100 {
+      padding-left: 0;
+    }
+  }
+
+  .flex-2-col h2 {
+    text-align: center;
+  }
+
+  .flex-2-col {
+    display: flex;
+    align-items: center;
+  }
+
+  .box-bg {
+    transition: 0.5s;
+  }
+
+  .box-bg:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+  }
+
+  .box-bg:hover h2 {
+    color: lightskyblue;
+    font-style: oblique;
+    font-weight: 500;
+  }
+
+  .heading h2 {
+    text-align: center;
+    color: lightskyblue;
+  }
+
+  .heading ol {
+    list-style-type: lower-alpha;
+  }
+
+  .heading a {
+    position: relative;
+  }
+
+  .heading a:hover::before {
+    content: '>';
+    font-weight: bold;
+    color: #000;
+    display: inline-block;
+  }
+
+  .text::after {
+    content: 'New';
+    position: absolute;
+    top: -5%;
+    right: -2em;
+    font-size: 0.65rem;
+    font-variant: small-caps;
+    font-weight: bold;
+    color: red;
+  }
+
+  .blocks .flex-item p:last-child {
+    font-style: italic;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+  }
+
+  .blocks .tm-section-title {
+    text-align: left;
+  }
+
+  .blocks .gallery-container li {
+    padding: 0.5em;
+  }
+
+  .blocks .gallery-container li:nth-child(odd) {
+    color: #fff;
+    background-color: lightskyblue;
+  }
+
+  .blocks .gallery-container p::first-letter {
+    font-weight: bold;
+  }
+
+  .blocks .flex-2-col {
+    display: none;
+  }
+
+  .tm-section-description {
+    line-height: 30px;
+    text-indent: 25px;
+  }
+
+  #contact_message {
+    border: 1px solid lightskyblue;
+    background-image: url('../img/email-icon.png');
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: bottom 0.5em right 0.5em;
+  }
+
+  input[type='text'],
+  input[type='email'] {
+    border: none;
+    border-bottom: 1px solid lightskyblue;
+  }
+
+  input[type='text']:focus,
+  input[type='email']:focus {
+    background-color: lightskyblue;
+  }
+
+  nav,
+  #home,
+  section {
+    box-shadow: 0 0 0.5em rgba(61, 55, 61, 0.7);
+  }
+
+  section::before {
+    content: '';
+    position: absolute;
+    border: 20px solid transparent;
+    border-left: 20px solid lightskyblue;
+    border-top: 20px solid lightskyblue;
+  }
+
+  .contact-form {
+    text-align: right;
+  }
+
+  .submit-btn {
+    padding: 1em 1.5em;
+    background-color: #fff;
+    color: lightskyblue;
+    border-color: lightskyblue;
+  }
+
+}
