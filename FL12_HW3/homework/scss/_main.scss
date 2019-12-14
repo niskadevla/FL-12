@@ -1,0 +1,243 @@
+// Function
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+/***/
+
+//Mixin
+@mixin btn() {
+  color: color(colorSecond);
+  background-color: color(btnColor);
+  font-size: 1rem;
+  font-weight: $fwNormal;
+  padding: 0.9em 2.7em;
+  border-radius: 3px;
+
+  &:hover {
+    background-color: color(btnColorHover);
+    cursor: pointer;
+  }
+}
+
+@mixin link($color, $fSize, $fWeight) {
+  a {
+    color: $color;
+    font-size: $fSize;
+    font-weight: $fWeight;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:active {
+      text-decoration: none;
+    }
+  }
+}
+
+/**/
+
+//Reset
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: 0;
+}
+/***/
+
+html {
+  font-family: $ffFirst;
+  font-weight: $fwLight;
+  font-size: 16px;
+  line-height: $lhMain;
+  color: color(colorMain);
+}
+
+body {
+  background-color: color(bgColor);
+}
+
+p {
+  font-family: $ffSecond;
+}
+
+.highlight {
+  background-color: color(hlColor);
+  display: inline-block;
+}
+
+// .header-wrap,
+// .footer-wrap {
+//   width: 1460px;
+//   margin: 0 auto;
+// }
+
+// Header
+.header {
+  background-image: $bgImg;
+  background-color: color(bgCardColor);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: color(bgColor);
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    clip-path: polygon(91% 88%, 100% 79%, 100% 100%, 81% 100%, 64% 100%, 80% 94%);
+    z-index: 2;
+  }
+
+  &-wrap {
+    position: relative;
+    width: 1460px;
+    margin: 0 auto;
+    padding-top: 1.2em;
+    padding-bottom: 11em;
+    z-index: 9;
+
+    @include link(color(colorSecond), 1.25rem, $fwNormal);
+  }
+
+  &_heading {
+    font-family: $ffFirst;
+    font-size: 4.5rem;
+    font-weight: $fwBold;
+    padding-top: 1em;
+    line-height: 1;
+
+    &,
+    & ~ div {
+      width: 34%;
+    }
+
+    & ~ div {
+      margin-top: 3.8em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .highlight {
+      @extend .highlight;
+      line-height: 0.4;
+      padding-bottom: 0.3em;
+    }
+  }
+
+  &_text {
+    padding-top: 4em;
+    width: 45%;
+    word-spacing: 0.08em;
+    line-height: 1.4;
+  }
+
+  &_button {
+    @include btn;
+  }
+
+}
+
+.landing-logo {
+  display: flex;
+  align-items: flex-start;
+
+  p {
+    font-size: 1.5rem;
+    font-weight: $fwNormal;
+    text-align: center;
+    padding-left: 0.6em;
+  }
+
+  span {
+    display: block;
+    font-size: 0.6rem;
+  }
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+
+//Main
+.section {
+  &_text {
+    font-size: 2.5rem;
+    font-weight: $fwNormal;
+    text-align: center;
+    padding-top: 0.9em;
+    padding-bottom: 0.9em;
+
+    .highlight {
+      @extend .highlight;
+      line-height: 0.7;
+      padding-top: 0.5em;
+    }
+  }
+
+  &_card_wrap {
+    width: 960px;
+    margin: 0 auto;
+    font-weight: $fwNormal;
+  }
+
+  &_card {
+    display: flex;
+    background-color: color(bgCardColor);
+    margin-bottom: 1.5em;
+    padding: 1.5em;
+    color: color(colorThird);
+    border-radius: 0.4em;
+
+    // &::after {
+    //   content: '';
+    //   display: table;
+    //   clear: both;
+    // }
+
+    &_img {
+      // display: block;
+      // float: left;
+      width: 450px;
+      border-radius: 0.4em;
+    }
+
+    &_right_container {
+      // float: left;
+      padding: 1em 2em;
+      // display: flex;
+      // flex-wrap: wrap;
+      // justify-content: space-between;
+      // align-items: center;
+      // align-content: space-between;
+      // height: 100%;
+    }
+
+    &_heading {
+      color: color(colorSecond);
+    }
+
+    @include link(color(colorThird), 1rem, $fwNormal);
+  }
+
+}
+
+/**/
