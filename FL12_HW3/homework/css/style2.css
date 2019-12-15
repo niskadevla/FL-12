@@ -1,67 +1,209 @@
-/*
-Error: Undefined variable: "$fwLight".
-        on line 61 of /media/alexa/D/Денис/Программирование/Epam_online/FL-12/FL12_HW3/homework/scss/_main.scss
-        from line 3 of /media/alexa/D/Денис/Программирование/Epam_online/FL-12/FL12_HW3/homework/scss/style2.scss
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-Backtrace:
-/media/alexa/D/Денис/Программирование/Epam_online/FL-12/FL12_HW3/homework/scss/_main.scss:61
-/media/alexa/D/Денис/Программирование/Epam_online/FL-12/FL12_HW3/homework/scss/style2.scss:3
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `block (2 levels) in visit_import'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `map'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `block in visit_import'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `block in with_import'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `with_import'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:20:in `render'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:290:in `render'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:400:in `run'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
-/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
-/usr/share/koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
-/usr/share/koala/bin/sass:22:in `load'
-/usr/share/koala/bin/sass:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined variable: \"$fwLight\".\A         on line 61 of /media/alexa/D/Денис/Программирование/Epam_online/FL-12/FL12_HW3/homework/scss/_main.scss\A         from line 3 of /media/alexa/D/Денис/Программирование/Epam_online/FL-12/FL12_HW3/homework/scss/style2.scss"; }
+button {
+  border: 0; }
+
+html {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #fff; }
+
+body {
+  background-color: #21232e; }
+
+p {
+  font-family: "Fresca", sans-serif; }
+
+.highlight, .header_heading .highlight, .section_text .highlight, .section_banner_heading .highlight {
+  background-color: #ff4e33;
+  display: inline-block; }
+
+.header {
+  background-image: url("../img/m-h-night.jpg");
+  background-color: #3b3f50;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+  .header::after {
+    content: '';
+    position: absolute;
+    background-color: #21232e;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    clip-path: polygon(91% 88%, 100% 79%, 100% 100%, 81% 100%, 64% 100%, 80% 94%);
+    z-index: 2; }
+  .header-wrap {
+    position: relative;
+    width: 1460px;
+    margin: 0 auto;
+    padding-top: 1.2em;
+    padding-bottom: 11em;
+    z-index: 9; }
+    .header-wrap a {
+      color: #fff;
+      font-size: 1.25rem;
+      font-weight: 600; }
+      .header-wrap a:hover {
+        text-decoration: none; }
+      .header-wrap a:active {
+        text-decoration: none; }
+  .header_heading {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 4.5rem;
+    font-weight: bold;
+    padding-top: 1em;
+    line-height: 1; }
+    .header_heading, .header_heading ~ div {
+      width: 34%; }
+    .header_heading ~ div {
+      margin-top: 3.8em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .header_heading .highlight {
+      line-height: 0.4;
+      padding-bottom: 0.3em; }
+  .header_text {
+    padding-top: 4em;
+    width: 45%;
+    word-spacing: 0.08em;
+    line-height: 1.4; }
+  .header_button {
+    color: #fff;
+    background-color: #e3ac00;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.9em 2.7em;
+    border-radius: 3px; }
+    .header_button:hover {
+      background-color: #912b53;
+      cursor: pointer; }
+
+.landing-logo, .footer_logo {
+  display: flex;
+  align-items: flex-start; }
+  .landing-logo p, .footer_logo p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    padding-left: 0.6em; }
+  .landing-logo span, .footer_logo span {
+    display: block;
+    font-size: 0.6rem; }
+  .landing-logo::after, .footer_logo::after {
+    content: '';
+    display: table;
+    clear: both; }
+
+.section {
+  position: relative;
+  padding-bottom: 9em; }
+  .section_text {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 0.9em;
+    padding-bottom: 0.9em; }
+    .section_text .highlight {
+      line-height: 0.7;
+      padding-top: 0.5em; }
+  .section_card_wrap {
+    width: 960px;
+    margin: 0 auto;
+    font-weight: 600; }
+  .section_card {
+    display: flex;
+    background-color: #3b3f50;
+    margin-bottom: 1.5em;
+    padding: 1.5em;
+    color: #d1d1d1;
+    border-radius: 0.4em; }
+    .section_card::after {
+      content: '';
+      display: table;
+      clear: both; }
+    .section_card_img {
+      width: 100%;
+      height: 100%;
+      border-radius: 0.4em; }
+    .section_card_right_container {
+      float: right;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 2em; }
+    .section_card_heading {
+      font-size: 1.35rem;
+      color: #fff; }
+    .section_card_text {
+      line-height: 2; }
+    .section_card a {
+      color: #d1d1d1;
+      font-size: 1rem;
+      font-weight: 600; }
+      .section_card a:hover {
+        text-decoration: none; }
+      .section_card a:active {
+        text-decoration: none; }
+
+.section_banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 1000px;
+  bottom: -4em;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(270deg, #912b53, #e3ac00);
+  padding: 1.5em 7em 2.5em;
+  border-radius: 0.5em; }
+  .section_banner_text_wrap {
+    font-weight: 600; }
+  .section_banner_heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5em; }
+    .section_banner_heading .highlight {
+      line-height: 0.8;
+      padding-top: 0.6em; }
+  .section_banner_text {
+    color: #d1d1d1; }
+  .section_banner_button {
+    color: #fff;
+    background-color: #e3ac00;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.9em 2.7em;
+    border-radius: 3px; }
+    .section_banner_button:hover {
+      background-color: #912b53;
+      cursor: pointer; }
+
+.footer {
+  background-color: #3b3f50;
+  color: #d1d1d1;
+  font-weight: 600; }
+  .footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1460px;
+    margin: 0 auto;
+    padding-top: 7em;
+    padding-bottom: 3em; }
+  .footer_logo {
+    color: #d1d1d1; }
+  .footer_text {
+    flex-basis: 23%;
+    line-height: 1.5; }

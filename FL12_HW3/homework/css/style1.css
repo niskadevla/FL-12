@@ -1,7 +1,3 @@
-/***/
-/***/
-/***/
-/**/
 *,
 *::after,
 *::before {
@@ -12,7 +8,6 @@
 button {
   border: 0; }
 
-/***/
 html {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
@@ -26,7 +21,7 @@ body {
 p {
   font-family: "Hind", sans-serif; }
 
-.highlight, .header_heading .highlight, .section_text .highlight {
+.highlight, .header_heading .highlight, .section_text .highlight, .section_banner_heading .highlight {
   background-color: #14A0C7;
   display: inline-block; }
 
@@ -93,56 +88,122 @@ p {
       background-color: #2C5ADC;
       cursor: pointer; }
 
-.landing-logo {
+.landing-logo, .footer_logo {
   display: flex;
   align-items: flex-start; }
-  .landing-logo p {
+  .landing-logo p, .footer_logo p {
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
     padding-left: 0.6em; }
-  .landing-logo span {
+  .landing-logo span, .footer_logo span {
     display: block;
     font-size: 0.6rem; }
-  .landing-logo::after {
+  .landing-logo::after, .footer_logo::after {
     content: '';
     display: table;
     clear: both; }
 
-.section_text {
-  font-size: 2.5rem;
-  font-weight: 600;
-  text-align: center;
-  padding-top: 0.9em;
-  padding-bottom: 0.9em; }
-  .section_text .highlight {
-    line-height: 0.7;
-    padding-top: 0.5em; }
-.section_card_wrap {
-  width: 960px;
-  margin: 0 auto;
-  font-weight: 600; }
-.section_card {
-  display: flex;
-  background-color: #2C2E38;
-  margin-bottom: 1.5em;
-  padding: 1.5em;
-  color: #C0C3CE;
-  border-radius: 0.4em; }
-  .section_card_img {
-    width: 450px;
-    border-radius: 0.4em; }
-  .section_card_right_container {
-    padding: 1em 2em; }
-  .section_card_heading {
-    color: #fff; }
-  .section_card a {
-    color: #C0C3CE;
-    font-size: 1rem;
+.section {
+  position: relative;
+  padding-bottom: 9em; }
+  .section_text {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 0.9em;
+    padding-bottom: 0.9em; }
+    .section_text .highlight {
+      line-height: 0.7;
+      padding-top: 0.5em; }
+  .section_card_wrap {
+    width: 960px;
+    margin: 0 auto;
     font-weight: 600; }
-    .section_card a:hover {
-      text-decoration: none; }
-    .section_card a:active {
-      text-decoration: none; }
+  .section_card {
+    display: flex;
+    background-color: #2C2E38;
+    margin-bottom: 1.5em;
+    padding: 1.5em;
+    color: #C0C3CE;
+    border-radius: 0.4em; }
+    .section_card::after {
+      content: '';
+      display: table;
+      clear: both; }
+    .section_card_img {
+      width: 100%;
+      height: 100%;
+      border-radius: 0.4em; }
+    .section_card_right_container {
+      float: right;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 2em; }
+    .section_card_heading {
+      font-size: 1.35rem;
+      color: #fff; }
+    .section_card_text {
+      line-height: 2; }
+    .section_card a {
+      color: #C0C3CE;
+      font-size: 1rem;
+      font-weight: 600; }
+      .section_card a:hover {
+        text-decoration: none; }
+      .section_card a:active {
+        text-decoration: none; }
 
-/**/
+.section_banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 1000px;
+  bottom: -4em;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(270deg, #2C5ADC, #699900);
+  padding: 1.5em 7em 2.5em;
+  border-radius: 0.5em; }
+  .section_banner_text_wrap {
+    font-weight: 600; }
+  .section_banner_heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5em; }
+    .section_banner_heading .highlight {
+      line-height: 0.8;
+      padding-top: 0.6em; }
+  .section_banner_text {
+    color: #C0C3CE; }
+  .section_banner_button {
+    color: #fff;
+    background-color: #699900;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.9em 2.7em;
+    border-radius: 3px; }
+    .section_banner_button:hover {
+      background-color: #2C5ADC;
+      cursor: pointer; }
+
+.footer {
+  background-color: #21232E;
+  color: #C0C3CE;
+  font-weight: 600; }
+  .footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1460px;
+    margin: 0 auto;
+    padding-top: 7em;
+    padding-bottom: 3em; }
+  .footer_logo {
+    color: #C0C3CE; }
+  .footer_text {
+    flex-basis: 23%;
+    line-height: 1.5; }

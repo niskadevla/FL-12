@@ -7,7 +7,7 @@
   @warn "Unknown `#{$key}` in $colors.";
   @return null;
 }
-/***/
+//***
 
 //Mixin
 @mixin btn() {
@@ -40,7 +40,7 @@
   }
 }
 
-/**/
+//***
 
 //Reset
 *,
@@ -54,7 +54,7 @@
 button {
   border: 0;
 }
-/***/
+//***
 
 html {
   font-family: $ffFirst;
@@ -76,12 +76,6 @@ p {
   background-color: color(hlColor);
   display: inline-block;
 }
-
-// .header-wrap,
-// .footer-wrap {
-//   width: 1460px;
-//   margin: 0 auto;
-// }
 
 // Header
 .header {
@@ -179,6 +173,9 @@ p {
 
 //Main
 .section {
+  position: relative;
+  padding-bottom: 9em;
+
   &_text {
     font-size: 2.5rem;
     font-weight: $fwNormal;
@@ -207,32 +204,34 @@ p {
     color: color(colorThird);
     border-radius: 0.4em;
 
-    // &::after {
-    //   content: '';
-    //   display: table;
-    //   clear: both;
-    // }
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
 
     &_img {
-      // display: block;
-      // float: left;
-      width: 450px;
+      width: 100%;
+      height: 100%;
       border-radius: 0.4em;
     }
 
     &_right_container {
-      // float: left;
+      float: right;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
       padding: 1em 2em;
-      // display: flex;
-      // flex-wrap: wrap;
-      // justify-content: space-between;
-      // align-items: center;
-      // align-content: space-between;
-      // height: 100%;
     }
 
     &_heading {
+      font-size: 1.35rem;
       color: color(colorSecond);
+    }
+
+    &_text {
+      line-height: 2;
     }
 
     @include link(color(colorThird), 1rem, $fwNormal);
@@ -240,4 +239,77 @@ p {
 
 }
 
-/**/
+//***
+
+//Section banner
+.section_banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 1000px;
+  bottom: -4em;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(270deg, color(btnColorHover),  color(btnColor));
+  padding: 1.5em 7em 2.5em;
+  border-radius: 0.5em;
+
+  &_text_wrap {
+    font-weight: $fwNormal;
+  }
+
+  &_heading {
+    font-size: 1.5rem;
+    font-weight: $fwBold;
+    margin-bottom: 0.5em;
+
+
+    .highlight {
+      @extend .highlight;
+      line-height: 0.8;
+      padding-top: 0.6em;
+    }
+  }
+
+  &_text {
+    color: color(colorThird);
+  }
+
+  &_button {
+    @include btn();
+  }
+}
+
+//***
+
+
+//Footer
+.footer {
+  background-color: color(bgFooterColor);
+  color: color(colorThird);
+  font-weight: $fwNormal;
+
+  &-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1460px;
+    margin: 0 auto;
+    padding-top: 7em;
+    padding-bottom: 3em;
+  }
+
+  &_logo {
+    @extend .landing-logo;
+    color: color(colorThird);
+  }
+
+  &_text {
+    flex-basis: 23%;
+    line-height: 1.5;
+  }
+
+}
+
+//***
