@@ -166,7 +166,7 @@ p {
 
 .article__description {
   display: flex;
-  align-items: center;footer__wrap
+  align-items: center;
   font-weight: lighter;
   padding: 1em 0;
 }
@@ -206,8 +206,7 @@ p {
 }
 
 .footer__right {
-  margin-left: 3em;
-  /* flex-basis: 50%; */
+  margin-left: 3em;  
 }
 
 .footer__title {
