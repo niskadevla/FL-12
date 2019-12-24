@@ -13,21 +13,23 @@ do {
 } while (!isFinite(a) || a === 0);
 
 do {
-  b = +prompt("imput 'b' for quadratic equation: ", '');
+  b = prompt("imput 'b' for quadratic equation: ", '');
 
-  if ( !isFinite(b) ) {
+  if ( !isFinite(b) || b === null || b.trim() === '') {
     alert('Invalid input data');
   }
-} while ( !isFinite(b) );
+} while ( !isFinite(b) || b === null || b.trim() === '');
 
 do {
-  c = +prompt("imput 'c' for quadratic equation: ", '');
+  c = prompt("imput 'c' for quadratic equation: ", '');
 
-  if ( !isFinite(c) ) {
+  if ( !isFinite(c) || c === null || c.trim() === '') {
     alert('Invalid input data');
   }
-} while ( !isFinite(c) );
+} while ( !isFinite(c) || c === null || c.trim() === '');
 
++b;
++c;
 d = b * b - kD * a * c;
 
 if (d < 0) {
