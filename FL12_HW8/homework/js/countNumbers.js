@@ -1,8 +1,16 @@
 'use strict';
 
 function makeNumber(str) {
-  let res = str.match(/\d/g) || [];
-  res = res.join('');
+  let res = '';
+
+  for(var i = 0; i < str.length; i++) {
+    for(var k = 0; k < 10; k++) {
+      if(+str[i] === k) {
+        res += k;
+        break;
+      }
+    }
+  }
 
   return res;
 }
@@ -22,4 +30,4 @@ function countNumbers(str) {
   return obj;
 }
 
-countNumbers('erer384jj4444666888jfd123');
+console.log( countNumbers('erer384jj4444666888jfd123') );
