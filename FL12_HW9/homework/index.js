@@ -31,13 +31,9 @@ console.log( convert('1', num1, num2, '4') );
 
 //Task 2
 function executeforEach(arr, f) {
-  let newArr = [];
-
   for(let i = 0; i < arr.length; i++) {
-    newArr[i] = f(arr[i]);
+    f(arr[i]);
   }
-
-  return newArr;
 }
 
 executeforEach([num1,num2,num3], function(el) {
@@ -47,23 +43,27 @@ executeforEach([num1,num2,num3], function(el) {
 
 //Task 3
 function mapArray(arr, f) {
+  let newArr = [];
 
-  return executeforEach(arr, f);
+  executeforEach(arr, function(el) {
+    newArr.push(f(+el));
+  });
+
+  return newArr;
 }
 
-console.log( mapArray([num2, '5', num3], el => parseInt(el) + three) ); // returns [5, 8, 6]
+console.log( mapArray([num2, '5', num3], el => el + three) ); // returns [5, 8, 6]
 
 
 //Task 4
 function filterArray(arr, f) {
-  let newArr = [];
-  let arr2 = executeforEach(arr, f);
+  let newArr = [];  
 
-  for(let i = 0; i < arr.length; i++) {
-    if(arr2[i]) {
-      newArr.push(arr[i]);
+  executeforEach(arr, function(el) {
+    if(f(el)) {
+      newArr.push(el);
     }
-  }
+  });
 
   return newArr;
 }
@@ -74,3 +74,28 @@ console.log( filterArray([num2, num3, num4], function(el) {
 
 
 //Task 5
+function flipOver(str) {
+  let newStr = '';
+
+  for(let i = str.length - 1; i >= 0; i--) {
+    newStr += str[i];
+  }
+
+  return newStr;
+}
+
+console.log( flipOver('hey world') ); // 'dlrow yeh'
+
+
+//Task 6
+function makeListFromRange(rang) {
+  let newArr = [];
+
+  for(let i = rang[0]; i <= rang[1]; i++) {
+    newArr.push(i);
+  }
+
+  return newArr;
+}
+
+console.log( makeListFromRange([num2, num4]) ); // [2, 3, 4, 5, 6, 7, 8]
