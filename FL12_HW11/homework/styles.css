@@ -1,0 +1,41 @@
+ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.material-icons {
+  color: rgb(228, 198, 39);
+}
+
+.material-icons.file {
+  color: #aaa;
+}
+
+.list {
+  line-height: 1.5;
+}
+
+.list * {
+  vertical-align: bottom;
+}
+
+.list-des:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+
+.list li span {
+  font-size: 1rem;
+}
+
+.list-down {
+  font-style: italic;
+}
+
+.list li > ul {
+  display: none;
+}
+
+.active > .list {
+  display: block;
+}
