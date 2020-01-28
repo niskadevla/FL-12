@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h3 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+h4 {
+  padding-bottom: 0.5rem;
+}
+
+section {
+  margin-top: 1rem;
+}
+
+br {
+  margin: 1rem 0;
+}
+
+.wrap {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.article,
+.header {
+  padding: 1rem;
+}
+
+.control {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.not-studied,
+.studied {
+  padding: 4rem 0;
+}
+
+.not-studied {
+  border-bottom: 1px solid #999;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.set {
+  padding: 1rem;
+}
+
+.sets_not-studied .set {
+  background-color: #eee;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.sets_studied .set {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+/*page-add-new-set*/
+.page-add-new-set {
+  display: none;
+}
+
+
+/*page-modify-set*/
+.page-modify-set {
+  display: none;
+}
